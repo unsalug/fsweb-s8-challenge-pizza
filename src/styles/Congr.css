@@ -1,0 +1,115 @@
+.congr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #ce2829;
+    padding: 20px;
+}
+
+.congr h1 {
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+}
+
+.congr p {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.congr button {
+    margin-top: 10px;
+}
+
+.lezzet {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    font-family: "Satisfy", sans-serif;
+    color: #fdc913 !important;
+}
+
+.alt-kisim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ac {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+    border: none;
+    background-color: #fdc913;
+    color: black;
+    font-weight: bold;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.secenekler {
+    color: #ce2829;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .congr {
+        padding: 15px;
+    }
+
+    .lezzet {
+        font-size: 2rem;
+    }
+
+    .alt-kisim {
+        margin-top: 8px;
+    }
+
+    .ac {
+        font-size: 1rem;
+        padding: 0.4rem 1.5rem;
+    }
+
+    .secenekler {
+        margin-top: 15px;
+    }
+
+    .congr h1 {
+        font-size: 1.5rem;
+    }
+
+    .congr p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lezzet {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .ac {
+        font-size: 1rem;
+        padding: 0.4rem 1.2rem;
+    }
+
+    .congr h1 {
+        font-size: 1.2rem;
+    }
+
+    .congr p {
+        font-size: 0.9rem;
+    }
+
+    .alt-kisim {
+        margin-top: 5px;
+    }
+}
