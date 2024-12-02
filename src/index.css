@@ -7,7 +7,56 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  /* border: #00ff00 1px solid; */
+  box-sizing: border-box;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Reset CSS */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Fonts
+  ince
+  font-family: 'Barlow', sans-serif;
+  elyazısı
+  font-family: 'Satisfy', cursive;
+  guclu
+  font-family: 'Quattrocento', serif;
+*/
+/* Sarı #FDC913
+  Açık Gri: #5F5F5F
+  Koyu Gri #292929
+  Kırmızı #CE2829   
+  Bej: #FAF7F2      beyaz yerine
+  */
+
+
+
+
