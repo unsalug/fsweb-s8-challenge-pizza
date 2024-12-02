@@ -56,8 +56,16 @@ body {
     font-family: "Barlow", sans-serif;
   }
   
-  .fırsat {
-    text-align: center;
+  .hamur-sec-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+  }
+
+  .hamur-sec-container label {
+      font-weight: bold;
+      margin-bottom: 0.2rem; 
   }
   
   .siparis-body {
@@ -256,4 +264,5 @@ body {
   .footer {
     height: 10rem;
   }
+  
   

@@ -229,7 +229,7 @@ const FormPizza = () => {
                     onChange={handleHamurChange}
                     required
                     >
-                    <option value="">--Hamur Seç--</option>
+                    <option value="">Hamur Kalınlığı</option>
                     <option value="thin">İnce</option>
                     <option value="thick">Kalın</option>
                     </select>
