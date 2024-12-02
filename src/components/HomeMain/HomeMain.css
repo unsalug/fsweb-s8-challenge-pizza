@@ -2,15 +2,20 @@
   background-color: white;
   border-radius: 29px;
   padding: 0.5rem 1.5rem;
+  text-align: center; /* İçeriği ortalamak için */
 }
 
 .home-main-categorys .categorys {
+  display: flex;
+  flex-wrap: wrap; /* Mobilde kartların alt alta geçmesi için */
+  justify-content: center; /* Kartları ortalamak için */
   gap: 1rem;
 }
 
 .home-main-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Mobilde içeriklerin taşmasını önler */
 }
 
 .home-main-container .home-main-comp-content {
@@ -18,6 +23,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
+  text-align: center; /* Mobilde düzgün hizalama */
 }
 
 .home-main-comp-content h4 {
@@ -38,8 +44,10 @@
 
 .home-main-foods {
   display: flex;
+  flex-wrap: wrap; /* Mobilde alt alta geçiş sağlar */
   gap: 1rem;
-  margin: .5rem;
+  margin: 0.5rem;
+  justify-content: center; /* Mobilde yemek kartlarını ortalar */
 }
 
 .home-main-food {
@@ -49,6 +57,9 @@
   border-radius: 12px;
   padding: 1rem;
   gap: 0.5rem;
+  width: calc(100% - 2rem); /* Dar ekranlarda genişliği ayarla */
+  max-width: 250px; /* Masaüstünde genişlik sınırı */
+  margin: 0 auto; /* Mobilde ortalamak için */
 }
 
 .home-main-food h6 {
@@ -58,15 +69,15 @@
   font-size: 18px;
 }
 
-.food-info{
-    display: flex;
-    justify-content: space-between;
+.food-info {
+  display: flex;
+  justify-content: space-between;
 }
 
-.home-main-food img{
-    margin: 0 auto;
-    width: 95%;
-    aspect-ratio: 1;
+.home-main-food img {
+  margin: 0 auto;
+  width: 100%; /* Görselleri tam genişlikte yap */
+  aspect-ratio: 1; /* Görsellerin düzgün oranlı olması için */
 }
 
 .food-info p {
@@ -81,4 +92,60 @@
   font-weight: 700;
   font-size: 15px;
   color: #292929;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .home-main-comp-content h4 {
+    font-size: 1.2rem; /* Daha küçük başlık boyutu */
+    margin-top: 9rem;
+  }
+
+  .home-main-comp-content h2 {
+    font-size: 1.5rem; /* Başlık boyutunu küçült */
+    display: flex;
+    text-align: center;
+    flex-direction: column; /* Her kelimeyi alt alta yerleştirmek için */
+    line-height: 1.5; 
+  }
+
+  .home-main-categorys .categorys {
+    gap: 0.5rem; /* Mobilde aralıkları daralt */
+  }
+
+  .home-main-food {
+    width: calc(100% - 2rem); /* Kartları daralt ve tam genişlikte yap */
+  }
+
+  .home-main-food h6 {
+    font-size: 1rem; /* Başlık boyutunu küçült */
+  }
+
+  .food-info p,
+  .food-info h5 {
+    font-size: 0.875rem; /* Yazı boyutlarını küçült */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-main-food {
+    width: 100%; /* Daha küçük ekranlarda tam genişlikte */
+  }
+
+  .home-main-comp-content h4 {
+    font-size: 1rem; /* Başlık daha kompakt */
+    display: flex;
+    text-align: center;
+    flex-direction: column; /* Her kelimeyi alt alta yerleştirmek için */
+    line-height: 1.5; 
+  }
+
+  .home-main-comp-content h2 {
+    font-size: 1.25rem; /* Başlık daha küçük */
+  }
+
+  .food-info p,
+  .food-info h5 {
+    font-size: 0.75rem; /* Yazı boyutlarını daha da küçült */
+  }
 }

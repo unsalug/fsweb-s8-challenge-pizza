@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.css'
+import './HomePage.css'
 
 import { useHistory } from 'react-router-dom/'
 import HomeCategory from '../components/HomeCategory/HomeCategory'
@@ -7,7 +7,7 @@ import HomeAdv from '../components/HomeAdv/HomeAdv'
 import Footer from '../components/Footer/Footer'
 import HomeMain from '../components/HomeMain/HomeMain'
 
-const Home = () => {
+const HomePage = () => {
   const history = useHistory()
 
   const handleClick = () => {
@@ -33,4 +33,4 @@ const Home = () => {
     </>
   )
 }
-export default Home
+export default HomePage

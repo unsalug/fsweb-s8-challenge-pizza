@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+.home-container {
+  color: #5f5f5f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background: url('/Assets/mvp-banner.png');
+  background-size: cover;
+  background-position: top;
+  height: 90vh;
+  width: 100%;
+  font-family: 'Barlow', sans-serif;
+}
+
+.home-container h1 {
+  font-size: 2.5rem; 
+  margin: 2.5rem 0;
+  font-family: 'Satisfy', cursive;
+  display: inline-block;
+}
+
+.home-container h2 {
+  font-size: 3.75rem;
+  font-weight: 300;
+}
+
+.home-container button {
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  background-color: #fdc913;
+  border-radius: 2rem;
+  margin: 3rem 0;
+  padding: 0.5rem 2rem;
+}
+
+.home-main-content {
+  background-color: #faf7f2;
+}
+
+/* Mobil için responsive tasarım */
+@media (max-width: 48rem) { 
+  .home-container {
+    height: auto; /* Yüksekliği otomatik yap */
+    padding: 2rem 1rem; /* İçerik kenar boşlukları */
+    background-position: center; /* Arka planı merkeze hizala */
+  }
+
+  .home-container h1 {
+    font-size: 1.5rem; /* 24px -> 1.5rem */
+    margin: 1.5rem 0;
+    display: block;
+  }
+
+  .home-container h2 {
+    font-size: 2.5rem; /* 40px -> 2.5rem */
+    display: flex;
+    flex-direction: column; /* Her kelimeyi alt alta yerleştirmek için */
+    line-height: 1.5; /* Kelimeler arasında boşluk bırakmak için */
+  }
+
+  .home-container button {
+    font-size: 0.875rem; /* 14px -> 0.875rem */
+    padding: 0.4rem 1.5rem; /* Daha dar düğme */
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 30rem) { /* 480px -> 30rem */
+  .home-container h1 {
+    font-size: 1.5rem; /* 24px -> 1.5rem */
+  }
+
+  .home-container h2 {
+    font-size: 2.5rem; /* 40px -> 2.5rem */
+    display: flex;
+    text-align: center;
+    flex-direction: column; /* Her kelimeyi alt alta yerleştirmek için */
+    line-height: 1.5; /* Kelimeler arasında boşluk bırakmak için */
+  }
+
+  .home-container button {
+    font-size: 0.75rem; /* 12px -> 0.75rem */
+    padding: 0.3rem 1rem; /* Düğme daha kompakt */
+  }
+}

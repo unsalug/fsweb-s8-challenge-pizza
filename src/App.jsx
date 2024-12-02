@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Home from './pages/Home'
+import HomePage from './pages/HomePage'
 import OrderPizza from './pages/OrderPizza'
 import Success from './pages/Success'
 
@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <HomePage />
         </Route>
         <Route path="/pizza" exact>
           <OrderPizza />
@@ -18,7 +18,7 @@ const App = () => {
           <Success />
         </Route>
         <Route path="*" exact>
-          <Home />
+          <HomePage />
         </Route>
       </Switch>
     </>

@@ -1,41 +1,91 @@
-.category-container{
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
+.category-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
 }
 
-.category-container .categorys{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 500;
+.category-container .categorys {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Mobilde alt alta geçmesi için */
+  justify-content: center;
+  gap: 2rem;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
 }
 
 .categorys .category-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    cursor: pointer;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px; 
-    transition: background-color 0.3s ease; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  width: calc(100% - 4rem); /* Mobilde genişlik ayarı */
+  max-width: 200px; /* Masaüstünde genişlik sınırı */
+  text-align: center; /* İçeriği ortala */
+}
+
+.categorys .category-icon:hover {
+  background-color: black;
+}
+
+.categorys .category-icon p {
+  color: black;
+  transition: color 0.3s ease;
+  font-size: 1rem; /* Mobilde okunabilir font boyutu */
+}
+
+.categorys .category-icon:hover p {
+  color: white;
+}
+
+.categorys .category-icon img {
+  width: 40px; /* Mobilde simge boyutu */
+  height: auto;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .categorys {
+      gap: 1rem; /* Mobilde aralıkları daralt */
+      margin-top: 3rem;
   }
-  
-  .categorys .category-icon:hover {
-    background-color: black; 
+
+  .categorys .category-icon {
+      width: calc(100% - 2rem); /* Daha dar ekranlar için genişlik */
+      padding: 0.75rem; /* İçerik kenar boşluklarını daralt */
   }
-  
+
+  .categorys .category-icon img {
+      width: 35px; /* Simge boyutunu küçült */
+  }
+
   .categorys .category-icon p {
-    color: black; 
-    transition: color 0.3s ease; 
+      font-size: 0.9rem; /* Yazı boyutunu küçült */
   }
-  
-  .categorys .category-icon:hover p {
-    color: white;
+}
+
+@media (max-width: 480px) {
+  .categorys {
+      gap: 0.5rem; /* Küçük ekranlarda daha az boşluk */
+      margin-top: 4rem;
+      align-items: center;
   }
-  
+
+  .categorys .category-icon {
+      width: 100%; /* Tam genişlik */
+      padding: 0.5rem; /* Daha kompakt görünüm */
+  }
+
+  .categorys .category-icon img {
+      width: 30px; /* Simge boyutunu daha da küçült */
+  }
+
+  .categorys .category-icon p {
+      font-size: 0.8rem; /* Yazı boyutunu daha kompakt yap */
+  }
+}
