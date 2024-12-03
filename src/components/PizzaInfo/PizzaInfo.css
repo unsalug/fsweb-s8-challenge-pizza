@@ -1,25 +1,77 @@
-.pizza-container .pizza-info h2{
-    padding: 1.5rem 0;
-    font-family: 'Quattrocento', serif;
+.pizza-info {
+    padding: 1rem;
+    padding: 0; /* İç boşluk sıfır */
+    margin: 0; 
 }
 
-.pizza-info .price-rate{
+.pizza-info .form-banner {
+    margin: 0; /* Dış boşluğu sıfırla */
+    padding: 0; /* İç boşluğu sıfırla */
+    position: relative; /* Akış içinde kalır */
+    transform: translateY(-4rem); /* Yukarı kaydır */
+    z-index: -1; /* Üstteki elementlerin altında kalır */
+}
+
+
+
+.pizza-info h2 {
+    padding: 1.5rem 0;
+    font-family: 'Quattrocento', serif;
+    font-size: 1.5rem; /* Mobil için font boyutunu küçült */
+}
+
+.pizza-info .price-rate {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem .2rem;
+    padding: 0.5rem 0.2rem;
+    flex-wrap: wrap; /* Mobilde alt alta geçebilir */
 }
 
-.pizza-info .price-rate p{
+.pizza-info .price-rate h3 {
+    font-size: 1.2rem; /* Mobil için font boyutunu ayarla */
+}
+
+.pizza-info .price-rate p {
     color: #5F5F5F;
     padding: 0;
+    font-size: 0.9rem; /* Yazı boyutunu küçült */
 }
 
-.pizza-info .price-rate p:first-of-type{
-    padding-left: 6rem;
-}
-
-.pizza-info p{
+.pizza-info p {
     color: #5F5F5F;
-    padding: 1rem .1rem;
+    padding: 1rem 0.1rem;
+    font-size: 1rem; /* Mobil uyumu için yazı boyutu */
+}
+
+/* Mobil uyumlu tasarım */
+@media (max-width: 768px) {
+    .form-banner {
+        display: none; /* Mobilde form-banner'ı gizler */
+    }
+
+    .pizza-info {
+        padding: 0.5rem; /* Daha dar iç boşluk */
+    }
+
+    .pizza-info h2 {
+        font-size: 1.3rem; /* Daha küçük başlık boyutu */
+    }
+
+    .pizza-info p {
+        font-size: 0.9rem; /* Yazı boyutunu daha da küçült */
+    }
+
+    .pizza-info .price-rate {
+        flex-direction: column; /* Mobilde alt alta sıralama */
+        align-items: flex-start;
+    }
+
+    .pizza-info .price-rate h3 {
+        font-size: 1.1rem;
+    }
+
+    .pizza-info .price-rate p {
+        font-size: 0.8rem; /* Yazı boyutunu küçült */
+    }
 }

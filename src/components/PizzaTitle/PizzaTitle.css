@@ -11,7 +11,7 @@
 }
 
 .pizza-title .route-container {
-    display: flex;
+    display: none;
     justify-content: center;
     padding-top: 1rem;
     width: 100%;
@@ -46,6 +46,7 @@
     }
 
     .pizza-title .route-container {
+        display: flex; /* Sadece mobilde göster */
         font-size: 0.8rem;
         gap: 0.1rem;
         justify-content: flex-start;
@@ -53,8 +54,8 @@
 
     /* Mobilde Anasayfa ve Sipariş Oluştur yan yana görünmesi için */
     .route-container .route {
-        flex-direction: row;  /* Öğeleri yatay hizala */
-        gap: 1rem;  /* Aralarındaki boşluğu artır */
+        flex-direction: row; /* Öğeleri yatay hizala */
+        gap: 1rem; /* Aralarındaki boşluğu artır */
     }
 }
 
@@ -73,6 +74,7 @@
     }
 
     .pizza-title .route-container {
+        display: flex; /* Sadece küçük mobil cihazlarda göster */
         font-size: 0.7rem;
         gap: 0.1rem;
         margin-left: 1.5rem;
@@ -80,7 +82,7 @@
 
     /* Mobilde Anasayfa ve Sipariş Oluştur yan yana görünmesi için */
     .route-container .route {
-        flex-direction: row;  /* Öğeleri yatay hizala */
-        gap: 0.5rem;  /* Aralarındaki boşluğu artır */
+        flex-direction: row; /* Öğeleri yatay hizala */
+        gap: 0.5rem; /* Aralarındaki boşluğu artır */
     }
 }

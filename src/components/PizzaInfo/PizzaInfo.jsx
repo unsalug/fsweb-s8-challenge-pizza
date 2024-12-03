@@ -4,6 +4,9 @@ import './PizzaInfo.css'
 const PizzaInfo = () => {
   return (
     <div className="pizza-info">
+      <div className='form-banner'>
+        <img src='Assets/Iteration-2-aseets/pictures/form-banner.png'/>
+      </div>
       <h2>Position Absolute Acı Pizza</h2>
       <div className="price-rate">
         <h3>85.50₺</h3>
