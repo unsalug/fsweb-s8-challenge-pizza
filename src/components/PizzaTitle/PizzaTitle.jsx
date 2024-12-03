@@ -9,8 +9,6 @@ const PizzaTitle = () => {
           <div className="route">
             <p>Anasayfa</p>
             <span>-</span>
-            <p>Secenekler</p>
-            <span>-</span>
             <p className="bold-text">Sipariş Oluştur</p>
           </div>
         </div>

@@ -39,9 +39,9 @@ const Footer = () => {
             <p>Testler Geçti Mutlu Burger </p>
             <p>Position Absolute Acı Burger</p>
           </div>
-          <div className="footer-galery">
+          <div className="footer-gallery">
             <h4>Instagram</h4>
-            <div className="footer-galery-photos">
+            <div className="footer-gallery-photos">
                 {insta.map((foto,i) => {
                   return <img src={`./insta/li-${i}.png`} alt="insta" />
                 })}

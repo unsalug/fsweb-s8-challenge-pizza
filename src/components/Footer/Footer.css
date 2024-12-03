@@ -26,6 +26,7 @@
   inline-size: 150px;
   font-size: 40px;
 }
+
 .footer-contact {
   display: flex;
   gap: 0.5rem;
@@ -63,28 +64,28 @@
   font-weight: 400;
 }
 
-.footer-galery {
+.footer-gallery {
   flex: 1;
   flex-basis: 200px;
   padding: 2rem 1rem;
   margin-left: auto;
 }
 
-.footer-galery h4 {
+.footer-gallery h4 {
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
   font-size: 24px;
   padding-bottom: 2rem;
 }
 
-.footer-galery-photos {
+.footer-gallery-photos {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   gap: 0.2rem;
 }
 
-.footer-galery-photos img {
+.footer-gallery-photos img {
   width: 70px;
   aspect-ratio: 1;
 }
@@ -101,4 +102,68 @@
 
 .footer-divider {
   border-top: #525252 1px solid;
+}
+
+/* Mobil uyumlu tasarım */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start; /* Sol hizalama */
+  }
+
+  .footer-contacts, .footer-menu, .footer-gallery {
+    flex: none;
+    text-align: left; /* Sol hizalama */
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .footer-contacts h2 {
+    font-size: 30px;
+  }
+
+  .footer-menu h3, .footer-gallery h4 {
+    font-size: 20px;
+  }
+
+  .footer-gallery-photos {
+    justify-content: flex-start; /* Sola hizalama */
+    gap: 1rem;
+  }
+
+  .footer-gallery-photos img {
+    width: 50px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start; /* Sol hizalama */
+    gap: 1rem;
+    width: 100%;
+    text-align: left; /* Sol hizalama */
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+  }
+}
+
+/* Çok küçük ekranlar için */
+@media (max-width: 480px) {
+  .footer-contacts h2 {
+    font-size: 25px;
+  }
+
+  .footer-menu h3, .footer-gallery h4 {
+    font-size: 18px;
+  }
+
+  .footer-gallery-photos img {
+    width: 40px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
 }

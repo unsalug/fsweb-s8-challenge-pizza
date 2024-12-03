@@ -89,7 +89,7 @@ const PizzaForm = () => {
       }
 
       setFormData({ ...newObj })
-      if ( newObj.material.length > 10) {
+      if ( newObj.material.length < 4 || newObj.material.length > 10) {
         setErrors({ ...errors, [name]: true })
         console.log(errors)
       } else {
@@ -100,7 +100,7 @@ const PizzaForm = () => {
 
     if (name === 'name') {
       setFormData({ ...formData, [name]: value })
-      if (value.length < 2) {
+      if (value.length < 3) {
         setErrors({ ...errors, [name]: true })
       } else {
         setErrors({ ...errors, [name]: false })
@@ -228,7 +228,7 @@ const PizzaForm = () => {
           onChange={handleChange}
         />
         {errors.name && (
-          <p className="formFeedback">İsim en az 2 karakter olmalıdır</p>
+          <p className="formFeedback">İsim en az 3 karakter olmalıdır</p>
         )}
       </section>
       <section className="pizza-order-note">

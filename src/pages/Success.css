@@ -4,6 +4,8 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: center; /* İçeriği dikeyde ortalamak */
+  overflow: hidden; /* Taşma durumunu engelle */
 }
 
 .success-container {
@@ -11,6 +13,7 @@
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
+  padding: 0 1rem; /* Sayfanın kenarlarına boşluk eklemek */
 }
 
 .success-container h1 {
@@ -27,4 +30,33 @@
   font-size: 70px;
   font-weight: 300;
   padding-top: 7rem;
+}
+
+/* Mobil için responsive düzenleme */
+@media (max-width: 768px) {
+  .success-container h1 {
+    font-size: 36px; /* H1 boyutunu küçült */
+    padding-top: 3rem; /* Yüksekliği ayarlayın */
+  }
+
+  .success-container h2 {
+    font-size: 48px; /* H2 boyutunu küçült */
+    padding-top: 3rem; /* Yüksekliği ayarlayın */
+  }
+}
+
+@media (max-width: 480px) {
+  .success-container h1 {
+    font-size: 28px; /* H1 boyutunu daha da küçült */
+    padding-top: 2rem;
+  }
+
+  .success-container h2 {
+    font-size: 36px; /* H2 boyutunu küçült */
+    padding-top: 2rem;
+  }
+
+  .success {
+    padding: 1rem; /* Sayfanın kenarlarından boşluk bırak */
+  }
 }
