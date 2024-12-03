@@ -23,9 +23,15 @@
 
 .footer-contacts h2 {
   font-family: 'Londrina Solid', sans-serif;
-  inline-size: 150px;
   font-size: 40px;
+  text-align: left;
 }
+
+.footer-contacts h2 span {
+  display: block;  /* Her kelimeyi alt alta yerleştirir */
+  font-size: 40px; /* İstenilen font boyutunu ayarlayın */
+}
+
 
 .footer-contact {
   display: flex;
@@ -152,7 +158,7 @@
 /* Çok küçük ekranlar için */
 @media (max-width: 480px) {
   .footer-contacts h2 {
-    font-size: 25px;
+    font-size: 1rem;
   }
 
   .footer-menu h3, .footer-gallery h4 {

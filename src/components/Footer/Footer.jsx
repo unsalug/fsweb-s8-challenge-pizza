@@ -20,7 +20,11 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-contacts">
-            <h2>Teknolojik Yemekler</h2>
+            <h2>
+              <span>Teknolojik</span>
+              <span>Yemekler</span>
+            </h2>
+
             {contacts.map((contact) => {
               return (
                 <div className="footer-contact">
