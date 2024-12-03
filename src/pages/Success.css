@@ -21,7 +21,17 @@
   font-family: 'Satisfy', cursive;
   font-size: 50px;
   font-weight: 300;
-  padding-top: 5rem;
+  padding-top: 1rem;
+}
+
+.success-container .lezzet {
+    
+  color: #fdc913;
+  font-family: 'Satisfy', cursive;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+ 
 }
 
 .success-container h2 {
