@@ -18,6 +18,7 @@ const HomePage = () => {
     <>
       <div className="home-container">
         <h1>Teknolojik Yemekler</h1>
+        <p className="fırsat">fırsatı kaçırma</p>
         <h2>KOD ACIKTIRIR</h2>
         <h2>PIZZA, DOYURUR</h2>
         <button data-cy="home-btn" id="order-pizza" onClick={handleClick}>
