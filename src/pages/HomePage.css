@@ -25,7 +25,7 @@ html, body {
 
 .home-container h1 {
   font-size: 2.5rem bold; 
-  margin: 2.5rem 0;
+  margin: 1.5rem 0;
   font-family: 'Satisfy';
   display: inline-block;
 }
@@ -33,6 +33,7 @@ html, body {
 .home-container h2 {
   font-size: 3.75rem;
   font-weight: 300;
+  margin-top: -1rem;
 }
 
 .home-container button {
@@ -41,12 +42,12 @@ html, body {
   cursor: pointer;
   background-color: #fdc913;
   border-radius: 2rem;
-  margin: 3rem 0;
+  margin: 1rem 0;
   padding: 0.5rem 2rem;
 }
 
 .fırsat {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   font-family: 'Satisfy', cursive;
   color: #fdc913;
@@ -63,19 +64,25 @@ html, body {
     height: auto; /* Yüksekliği otomatik yap */
     padding: 2rem 1rem; /* İçerik kenar boşlukları */
     background-position: center; /* Arka planı merkeze hizala */
+    text-align: center;
   }
 
   .home-container h1 {
     font-size: 1.5rem; /* 24px -> 1.5rem */
     margin: 1.5rem 0;
-    display: block;
+    
+  }
+
+  .fırsat {
+    display: none;
   }
 
   .home-container h2 {
-    font-size: 2.5rem; /* 40px -> 2.5rem */
+    font-size: 2rem; /* 40px -> 2.5rem */
     display: flex;
     flex-direction: column; /* Her kelimeyi alt alta yerleştirmek için */
-    line-height: 1.5; /* Kelimeler arasında boşluk bırakmak için */
+    display: block;
+    margin: 0.5rem 0;
   }
 
   .home-container button {
@@ -95,7 +102,11 @@ html, body {
     display: flex;
     text-align: center;
     flex-direction: column; /* Her kelimeyi alt alta yerleştirmek için */
-    line-height: 1.5; /* Kelimeler arasında boşluk bırakmak için */
+    
+  }
+
+  .fırsat {
+    display: none;
   }
 
   .home-container button {

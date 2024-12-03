@@ -25,7 +25,9 @@ const HomePage = () => {
           ACIKTIM
         </button>
       </div>
-      <HomeCategory />
+      <div className="home-main-categorys">
+          <HomeCategory />
+        </div>
       <div className="home-main-content">
         <HomeAdv />
         <HomeMain />
