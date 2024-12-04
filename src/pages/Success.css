@@ -73,6 +73,8 @@
   margin-top: 40px;
   color: white;
   text-align: left;
+  padding-left: 13rem;
+  flex-wrap: wrap;
 }
 
 .bilgi-icerik p {
@@ -83,10 +85,26 @@
   width: 100%;
 }
 
+.bilgi-p4 {
+  color: white;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.malzeme-listesi {
+  display: inline-block; /* Satır içi blok yap */
+  max-width: 100%; /* Taşma durumunda genişliği sınırla */
+  word-wrap: break-word; /* Gerekirse kelimeleri böl */
+  overflow-wrap: break-word; /* Taşma durumunda kelimeleri alt satıra geçir */
+  font-weight: 800;
+}
+
+
 .sonuc {
   margin-top: 40px;
   width: 100%;
-  max-width: 350px;
+  max-width: 500px;
   height: auto;
   color: white;
   border: solid 1px;
@@ -144,7 +162,7 @@
   }
 
   .bilgi-icerik {
-    margin-left: 0.7rem;
+    margin-left: -7rem;
   }
 }
 
@@ -169,11 +187,15 @@
 
   .sonuc-p4,
   .sonuc-p5 {
-    padding-left: 5rem; /* Mobilde daha küçük padding */
+    padding-left: 10rem; /* Mobilde daha küçük padding */
     margin-left: 0; /* Mobilde fazla margin kaldır */
   }
 
   .sonuc p {
     font-size: 16px; /* Mobilde yazı boyutunu küçült */
+  }
+
+  .bilgi-icerik {
+    margin-left: -7rem;
   }
 }

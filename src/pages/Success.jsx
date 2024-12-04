@@ -26,7 +26,10 @@ const Success = () => {
               Hamur: <strong>{successOrder.paste}</strong>
             </p>
             <p className="bilgi-p4">
-              Ek Malzemeler: <strong>{successOrder.material.join(' , ')}</strong>
+              Ek Malzemeler: 
+              <span className="malzeme-listesi">
+                {successOrder.material.join(' , ')}
+              </span>
             </p>
           </div>
           <div className="sonuc">
