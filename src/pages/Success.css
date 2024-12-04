@@ -142,6 +142,10 @@
   .sonuc-p5 {
     padding-left: 8rem; /* Tablet ekranlar için daha küçük padding */
   }
+
+  .bilgi-icerik {
+    margin-left: 0.7rem;
+  }
 }
 
 /* Küçük ekranlar için düzenleme */
