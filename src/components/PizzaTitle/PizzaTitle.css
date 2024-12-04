@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 .pizza-title {
     text-align: center;
     background-color: #CE2829;
@@ -8,6 +9,8 @@
 
 .pizza-title h1 {
     font-size: 2rem;
+    color: #ffffff;
+    font-family: 'Londrina Solid', sans-serif;
 }
 
 .pizza-title .route-container {

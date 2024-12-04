@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
 .success {
   background-color: #ce2829;
   height: 100vh;
@@ -82,38 +85,38 @@
 
 .sonuc {
   margin-top: 40px;
-  width: 100%; /* Genişliği %100 yaparak daha esnek hale getirilmiş */
-  max-width: 350px; /* Kutunun maksimum genişliğini ayarlayın */
-  height: auto; /* Yüksekliği içerik ile uyumlu hale getirin */
+  width: 100%;
+  max-width: 350px;
+  height: auto;
   color: white;
   border: solid 1px;
   border-radius: 6px;
   border-color: #faf7f2;
   font-family: Barlow;
-  padding: 1rem; /* İçeriği kutu içinde yerleştirmek için padding */
-  box-sizing: border-box; /* Padding ve border'ın genişliği etkilemesini engeller */
-  text-align: left; /* Yazıları sola hizalar */
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 .sonuc p {
   font-size: 18px;
   font-weight: 600;
   line-height: 2;
-  margin: 5px 0; /* Paragraflar arasındaki boşluğu ayarlayın */
+  margin: 5px 0;
 }
 
 .sonuc-p4,
 .sonuc-p5 {
-  font-weight: bold; /* Rakamların daha belirgin olmasını sağlar */
-  color: #fcdc13; /* Para birimi renklerini belirginleştirir */
+  font-weight: bold;
+  color: #FFFFFF;
 }
 
 .sonuc-p4 {
-  margin-left: 10px;
+  padding-left: 12rem; /* Büyük ekranlarda */
 }
 
 .sonuc-p5 {
-  margin-left: 10px;
+  padding-left: 12rem; /* Büyük ekranlarda */
 }
 
 /* Tablet için düzenleme */
@@ -132,6 +135,12 @@
 
   .sonuc {
     max-width: 80%; /* Tablet ekranlar için kutu genişliği */
+    padding: 0.8rem; /* Daha küçük padding */
+  }
+
+  .sonuc-p4,
+  .sonuc-p5 {
+    padding-left: 8rem; /* Tablet ekranlar için daha küçük padding */
   }
 }
 
@@ -151,5 +160,16 @@
 
   .sonuc {
     max-width: 95%; /* Mobil ekranlarda kutunun daha geniş görünmesini sağlar */
+    padding: 0.5rem; /* Daha küçük padding */
+  }
+
+  .sonuc-p4,
+  .sonuc-p5 {
+    padding-left: 5rem; /* Mobilde daha küçük padding */
+    margin-left: 0; /* Mobilde fazla margin kaldır */
+  }
+
+  .sonuc p {
+    font-size: 16px; /* Mobilde yazı boyutunu küçült */
   }
 }
