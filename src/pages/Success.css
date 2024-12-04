@@ -50,7 +50,7 @@
   height: 2px; /* Çizgi kalınlığını ayarla */
   background-color: #ffffff; /* Çizgi rengini beyaz yap */
   width: 100%; /* Çizgi genişliğini yazının boyutuyla eşitle */
-  max-width: 300px; /* Yazı genişliğine sınır koy */
+  max-width: 32rem; /* Yazı genişliğine sınır koy */
   margin: 1rem auto; /* Üst ve alt boşlukları ayarla, ortala */
 }
 
