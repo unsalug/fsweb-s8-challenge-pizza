@@ -114,11 +114,18 @@ const PizzaForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    const orderData = {
+      ...formData,
+      total: totalPrice, // Toplam fiyatı da ekliyoruz
+    }
     axios
       .post('https://reqres.in/api/users', formData)
       .then(function (response) {
         console.log(response.data)
-        history.push('/success')
+        history.push({
+          pathname: '/success',
+          state: orderData, // Veriyi state olarak gönderiyoruz
+        })
       })
       .catch(function (error) {
         console.log(error)

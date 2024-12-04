@@ -1,22 +1,22 @@
 describe('home test', () => {
   it('passes', () => {
-    cy.visit('/')
+    cy.visit('http://localhost:5173/') // Doğru portu kullandık
   })
 
   it('Acıktım buttonuna tıkla', () => {
     //arrange
-    cy.visit('/')
+    cy.visit('http://localhost:5173/') // Doğru port
     //act
     cy.get("[data-cy='home-btn']").click()
     //assert
-    cy.url().should('eq', 'http://localhost:5173/pizza')
+    cy.url().should('eq', 'http://localhost:5173/pizza') // URL'nin doğru değiştiğini kontrol et
   })
 })
 
 describe('tests', () => {
   it('İsim alanını kullan', () => {
     //arrange
-    cy.visit('/')
+    cy.visit('http://localhost:5173/')
     //act
     cy.get("[data-cy='home-btn']").click()
     cy.get("[id='name-input']").type('Buraya isim yazılacak')
@@ -25,7 +25,7 @@ describe('tests', () => {
 
   it('Materyal seç', () => {
     //arrange
-    cy.visit('/')
+    cy.visit('http://localhost:5173/')
     //act
     cy.get("[data-cy='home-btn']").click()
 
@@ -40,7 +40,7 @@ describe('tests', () => {
 
   it('e2e', () => {
     //arrange
-    cy.visit('/')
+    cy.visit('http://localhost:5173/')
     //act
     cy.get("[data-cy='home-btn']").click()
 

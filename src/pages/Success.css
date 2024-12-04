@@ -4,7 +4,7 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center; /* İçeriği dikeyde ortalamak */
+  align-items: center; /* İçeriği dikeyde ve yatayda ortalar */
   overflow: hidden; /* Taşma durumunu engelle */
   padding: 1rem; /* Mobilde kenar boşluğu */
 }
@@ -24,7 +24,7 @@
   font-family: 'Londrina Solid', sans-serif;
   font-size: 50px;
   font-weight: 300;
-  margin-top: -20rem; /* Margin top korundu */
+  margin-top: 0; /* Margin top sıfırlanmış */
 }
 
 .success-container .lezzet {
@@ -33,7 +33,7 @@
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  margin-top: -3rem; /* Mevcut margin top korundu */
+  margin-top: 10px; /* Daha uygun bir margin */
 }
 
 .success-container h2 {
@@ -41,8 +41,8 @@
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 70px;
   font-weight: 300;
-  padding-top: 7rem; /* Padding top korundu */
-  margin-top: -8rem; /* Margin top korundu */
+  padding-top: 2rem; /* Top padding artırıldı */
+  margin-top: 0; /* Margin top sıfırlandı */
 }
 
 .success-container hr {
@@ -54,48 +54,102 @@
   margin: 1rem auto; /* Üst ve alt boşlukları ayarla, ortala */
 }
 
+.bilgi-baslik {
+  width: 476px;
+  height: 56px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 250px;
+  font-weight: 600;
+}
 
+.bilgi-icerik {
+  margin-top: 40px;
+  color: white;
+  text-align: left;
+}
+
+.bilgi-icerik p {
+  color: white;
+  text-align: left;
+  line-height: 24.76px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.sonuc {
+  margin-top: 40px;
+  width: 100%; /* Genişliği %100 yaparak daha esnek hale getirilmiş */
+  max-width: 350px; /* Kutunun maksimum genişliğini ayarlayın */
+  height: auto; /* Yüksekliği içerik ile uyumlu hale getirin */
+  color: white;
+  border: solid 1px;
+  border-radius: 6px;
+  border-color: #faf7f2;
+  font-family: Barlow;
+  padding: 1rem; /* İçeriği kutu içinde yerleştirmek için padding */
+  box-sizing: border-box; /* Padding ve border'ın genişliği etkilemesini engeller */
+  text-align: left; /* Yazıları sola hizalar */
+}
+
+.sonuc p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 2;
+  margin: 5px 0; /* Paragraflar arasındaki boşluğu ayarlayın */
+}
+
+.sonuc-p4,
+.sonuc-p5 {
+  font-weight: bold; /* Rakamların daha belirgin olmasını sağlar */
+  color: #fcdc13; /* Para birimi renklerini belirginleştirir */
+}
+
+.sonuc-p4 {
+  margin-left: 10px;
+}
+
+.sonuc-p5 {
+  margin-left: 10px;
+}
 
 /* Tablet için düzenleme */
 @media (max-width: 768px) {
-  .success {
-    padding: 2rem; /* Kenar boşlukları artırıldı */
-  }
-
   .success-container h1 {
     font-size: 36px; /* H1 boyutunu küçült */
-    margin-top: -15rem; /* Margin düzenlemesi */
   }
 
   .success-container .lezzet {
     font-size: 28px; /* Daha küçük yazı boyutu */
-    margin-top: -2rem; /* Margin top korundu ve düzenlendi */
   }
 
   .success-container h2 {
     font-size: 48px; /* H2 boyutunu küçült */
-    margin-top: -6rem; /* Margin düzenlemesi */
+  }
+
+  .sonuc {
+    max-width: 80%; /* Tablet ekranlar için kutu genişliği */
   }
 }
 
 /* Küçük ekranlar için düzenleme */
 @media (max-width: 480px) {
-  .success {
-    padding: 1rem; /* Kenar boşluklarını koru */
-  }
-
   .success-container h1 {
     font-size: 28px; /* H1 boyutunu daha da küçült */
-    margin-top: -10rem; /* Margin top düzenlemesi */
   }
 
   .success-container .lezzet {
     font-size: 24px; /* Daha kompakt yazı boyutu */
-    margin-top: -1rem; /* Margin top düzenlemesi */
   }
 
   .success-container h2 {
     font-size: 36px; /* H2 boyutunu küçült */
-    margin-top: -5rem; /* Margin top düzenlemesi */
+  }
+
+  .sonuc {
+    max-width: 95%; /* Mobil ekranlarda kutunun daha geniş görünmesini sağlar */
   }
 }
