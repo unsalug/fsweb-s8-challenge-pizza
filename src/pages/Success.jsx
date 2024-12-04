@@ -12,6 +12,7 @@ const Success = () => {
           <h2>
            SİPARİŞ ALINDI!
           </h2>
+          <hr />
         </div>
       </div>
       <Footer />

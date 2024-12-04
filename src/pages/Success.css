@@ -6,67 +6,96 @@
   justify-content: center;
   align-items: center; /* İçeriği dikeyde ortalamak */
   overflow: hidden; /* Taşma durumunu engelle */
+  padding: 1rem; /* Mobilde kenar boşluğu */
 }
 
 .success-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Margin boşluklarını korur */
+  align-items: center; /* İçeriği yatayda ortalar */
   text-align: center;
-  padding: 0 1rem; /* Sayfanın kenarlarına boşluk eklemek */
+  max-width: 600px; /* İçerik genişliği sınırı */
+  padding: 0 1rem; /* Kenarlarda boşluk */
 }
 
 .success-container h1 {
   color: #ffffff;
-  font-family: 'Satisfy', cursive;
+  font-family: 'Londrina Solid', sans-serif;
   font-size: 50px;
   font-weight: 300;
-  padding-top: 1rem;
+  margin-top: -20rem; /* Margin top korundu */
 }
 
 .success-container .lezzet {
-    
   color: #fdc913;
   font-family: 'Satisfy', cursive;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
- 
+  margin-top: -3rem; /* Mevcut margin top korundu */
 }
 
 .success-container h2 {
   color: #ffffff;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 70px;
   font-weight: 300;
-  padding-top: 7rem;
+  padding-top: 7rem; /* Padding top korundu */
+  margin-top: -8rem; /* Margin top korundu */
 }
 
-/* Mobil için responsive düzenleme */
+.success-container hr {
+  border: none; /* Varsayılan kenarlığı kaldır */
+  height: 2px; /* Çizgi kalınlığını ayarla */
+  background-color: #ffffff; /* Çizgi rengini beyaz yap */
+  width: 100%; /* Çizgi genişliğini yazının boyutuyla eşitle */
+  max-width: 300px; /* Yazı genişliğine sınır koy */
+  margin: 1rem auto; /* Üst ve alt boşlukları ayarla, ortala */
+}
+
+
+
+/* Tablet için düzenleme */
 @media (max-width: 768px) {
+  .success {
+    padding: 2rem; /* Kenar boşlukları artırıldı */
+  }
+
   .success-container h1 {
     font-size: 36px; /* H1 boyutunu küçült */
-    padding-top: 3rem; /* Yüksekliği ayarlayın */
+    margin-top: -15rem; /* Margin düzenlemesi */
+  }
+
+  .success-container .lezzet {
+    font-size: 28px; /* Daha küçük yazı boyutu */
+    margin-top: -2rem; /* Margin top korundu ve düzenlendi */
   }
 
   .success-container h2 {
     font-size: 48px; /* H2 boyutunu küçült */
-    padding-top: 3rem; /* Yüksekliği ayarlayın */
+    margin-top: -6rem; /* Margin düzenlemesi */
   }
 }
 
+/* Küçük ekranlar için düzenleme */
 @media (max-width: 480px) {
+  .success {
+    padding: 1rem; /* Kenar boşluklarını koru */
+  }
+
   .success-container h1 {
     font-size: 28px; /* H1 boyutunu daha da küçült */
-    padding-top: 2rem;
+    margin-top: -10rem; /* Margin top düzenlemesi */
+  }
+
+  .success-container .lezzet {
+    font-size: 24px; /* Daha kompakt yazı boyutu */
+    margin-top: -1rem; /* Margin top düzenlemesi */
   }
 
   .success-container h2 {
     font-size: 36px; /* H2 boyutunu küçült */
-    padding-top: 2rem;
-  }
-
-  .success {
-    padding: 1rem; /* Sayfanın kenarlarından boşluk bırak */
+    margin-top: -5rem; /* Margin top düzenlemesi */
   }
 }

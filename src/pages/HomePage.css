@@ -32,7 +32,8 @@ html, body {
 
 .home-container h2 {
   font-size: 3.75rem;
-  font-weight: 300;
+  font-family: "Roboto Condensed";
+  font-weight: lighter;
   margin-top: -1rem;
 }
 

@@ -99,11 +99,20 @@
 .footer-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
   width: 900px;
   font-family: 'Barlow', sans-serif;
   font-weight: 400;
   padding: 1.5rem 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.twitter-icon {
+  cursor: pointer;
 }
 
 .footer-divider {
@@ -143,15 +152,21 @@
   }
 
   .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start; /* Sol hizalama */
-    gap: 1rem;
-    width: 100%;
-    text-align: left; /* Sol hizalama */
+    flex-direction: row; /* Yatay hizalama */
+    justify-content: space-between; /* İki elemanı ayrı köşelere yerleştir */
+    width: 100%; /* Tam genişlikte */
+    padding: 1rem;
   }
 
   .footer-bottom p {
     font-size: 14px;
+  }
+
+  .twitter-icon {
+    margin-left: auto; /* Sağ tarafa yasla */
+    font-size: 20px; /* İkonun boyutunu ayarla */
+    width: 24px;
+    height: 14px;
   }
 }
 
@@ -171,5 +186,9 @@
 
   .footer-bottom p {
     font-size: 12px;
+  }
+
+  .twitter-icon {
+    font-size: 18px; /* Küçük ikon boyutu */
   }
 }

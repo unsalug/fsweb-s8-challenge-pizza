@@ -1,10 +1,12 @@
 import React from 'react'
 import './Footer.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // FontAwesome bileşeni
+import { faTwitter } from '@fortawesome/free-brands-svg-icons' // Twitter ikonu
+
 import contact1 from './FooterIcons/icon-1.png'
 import contact2 from './FooterIcons/icon-2.png'
 import contact3 from './FooterIcons/icon-3.png'
-
 
 const insta = ["insta0", "insta1", "insta2", "insta3", "insta4", "insta5"]
 
@@ -25,14 +27,12 @@ const Footer = () => {
               <span>Yemekler</span>
             </h2>
 
-            {contacts.map((contact) => {
-              return (
-                <div className="footer-contact">
-                  <img src={contact[1]} alt="contact icon" />
-                  <p>{contact[0]}</p>
-                </div>
-              )
-            })}
+            {contacts.map((contact, index) => (
+              <div key={index} className="footer-contact">
+                <img src={contact[1]} alt="contact icon" />
+                <p>{contact[0]}</p>
+              </div>
+            ))}
           </div>
           <div className="footer-menu">
             <h3>Hot Menu</h3>
@@ -46,10 +46,10 @@ const Footer = () => {
           <div className="footer-gallery">
             <h4>Instagram</h4>
             <div className="footer-gallery-photos">
-                {insta.map((foto,i) => {
-                  return <img src={`./insta/li-${i}.png`} alt="insta" />
-                })}
-              </div>
+              {insta.map((foto, i) => (
+                <img key={i} src={`./insta/li-${i}.png`} alt="insta" />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-bottom">
           <p>© 2023 Teknolojik Yemekler.</p>
-          <p>Twitter</p>
+          <FontAwesomeIcon icon={faTwitter} className="twitter-icon" />
         </div>
       </div>
     </footer>
