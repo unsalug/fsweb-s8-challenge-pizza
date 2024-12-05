@@ -178,6 +178,7 @@ hr {
   font-family: 'Barlow', sans-serif;
   padding: 0 0 0 0;
   margin-bottom: 0;
+  margin-top: 1rem;
 }
 
 input[type='radio']:after {
@@ -219,22 +220,37 @@ input[type='radio']:checked:after {
 }
 
 /* Checkbox */
-input[type='checkbox']{
-    width: 20px;
-    height: 20px;
+/* Varsayılan checkbox */
+input[type='checkbox'] {
+  width: 1.5rem; /* Checkbox genişliği */
+  height: 1.5rem; /* Checkbox yüksekliği */
+  margin: 1rem;
+  background-color: white; /* Varsayılan arka plan rengi */
+  border: 2px solid #000; /* Kenarlık rengi */
+  border-radius: 4px; /* Hafif köşe yuvarlama */
+  appearance: none; /* Tarayıcı varsayılan stilini kaldır */
+  cursor: pointer; /* Fare işaretçisini pointer yap */
+  display: inline-block;
 }
 
-input[type='checkbox']:after {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  top: -10px;
-  left: -10px;
+/* Checkbox işaretlendiğinde */
+input[type='checkbox']:checked {
+  background-color: #FDC913; /* Arka plan sarı */
+  border-color: #f1c40f; /* Kenarlık rengi sarı */
   position: relative;
-  background-color: red;
-  display: inline-block;
-  visibility: visible;
 }
+
+/* Tik işareti */
+input[type='checkbox']:checked::after {
+  content: "✔"; /* Tik işareti */
+  color: rgba(0, 0, 0, 1); /* Tik rengi */
+  font-size: 0.8rem; /* Tik boyutu */
+  position: absolute;
+  top: 50%; /* Dikeyde ortala */
+  left: 50%; /* Yatayda ortala */
+  transform: translate(-50%, -50%); /* Tam merkezleme */
+}
+
 
 @media (max-width: 768px) {
   .pizza-container {
@@ -245,6 +261,16 @@ input[type='checkbox']:after {
   input[type='checkbox'] {
     width: 16px; /* Boyutu küçültüldü */
     height: 16px;
+  }
+
+  input[type='checkbox']:checked::after {
+    content: "✔"; /* Tik işareti */
+    color: rgba(0, 0, 0, 1); /* Tik rengi */
+    font-size: 0.5rem; /* Tik boyutu */
+    position: absolute;
+    top: 50%; /* Dikeyde ortala */
+    left: 50%; /* Yatayda ortala */
+    transform: translate(-50%, -50%); /* Tam merkezleme */
   }
 
   .pizza-container .pizza-content {

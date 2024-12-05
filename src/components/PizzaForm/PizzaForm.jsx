@@ -6,11 +6,11 @@ import axios from 'axios'
 const materials = [
   'Pepperoni',
   'Sosis',
-  'Domates',
+  'Jambon',
   'Biber',
   'Mısır',
   'Sucuk',
-  'Kanada Jambonu',
+  'Domates',
   'Ananas',
   'Tavuk Izgara',
   'Jalepeno',
